@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link href="styles/style.css" rel="stylesheet" >
+    <title>801 Tribe</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  .dropdown-submenu {
+    position: relative;
+  }
+  .dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+  }
+  </style>
+</head>
+<body>
+    
+    <header>
+                <table>
+                    <tr>
+                        <th class="navcol"><a class="active" href="/index.html">Home</a></th>
+                        <th class="navcol"><div class="dropdown"><button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Teams<span class="caret"></span></button>
+                            <ul class="dropdown-menu">
+                                <li><a tabindex="-1" href="#">HTML</a></li>
+                                <li><a tabindex="-1" href="#">CSS</a></li>
+                                <li class="dropdown-submenu">
+                                  <a class="test" tabindex="-1" href="#">New dropdown <span class="caret"></span></a>
+                                  <ul class="dropdown-menu">
+                                    <li><a tabindex="-1" href="#">2nd level dropdown</a></li>
+                                    <li><a tabindex="-1" href="#">2nd level dropdown</a></li>
+                                  </ul>
+                                </li>
+                              </ul>
+                        </div</th>
+                        <th><div id="hiddenlogo" class="hl hidden"></div></th>
+                        <th class="navcol"><a href="/connect.html">Upcoming Events</a></th>
+                        <th class="navcol"><a href="/about.html">Media</a></th>
+                    </tr>
+                </table>
+        </header>
+              <script>
+              $(document).ready(function(){
+                $('.dropdown-submenu a.test').on("click", function(e){
+                  $(this).next('ul').toggle();
+                  e.stopPropagation();
+                  e.preventDefault();
+                });
+              });
+              </script>
+    
+    <script src="scripts/index.js" defer></script>
+</body>
+</html>
