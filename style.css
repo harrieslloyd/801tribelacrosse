@@ -1,10 +1,10 @@
 .active {
-    color: darkgreen;
+    color: #943535;
     font-weight: bold;
 }
 
 .active:after {
-    background-color: darkgreen;
+    background-color: #943535 !important;
 }
 
 header {
