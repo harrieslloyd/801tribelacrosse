@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+}
+
 .active {
   color: #943535;
   font-weight: bold;
